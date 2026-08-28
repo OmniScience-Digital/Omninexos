@@ -572,7 +572,12 @@ const schema = a.schema({
       quoteAction: a.string(), //derived state
       clickUpTaskidCrm1: a.string(),
       clickUpTaskidCrm2: a.string(),
-      clickUpTaskidCrm5: a.string(),
+      clickUpTaskidCRM032: a.string(),
+      clickUpTaskidCRM033: a.string(),
+      clickUpTaskidCRM050_Global: a.string(),
+      clickUpTaskidCRM050_SERVICES: a.string(),
+      clickUpTaskidCRM051_GLOBAL: a.string(),
+      clickUpTaskidCRM051_SERVICES: a.string(),
       clickUpTaskidCrm7: a.string(),
       clickUpTaskidCrm9: a.string(),
     })
@@ -697,7 +702,7 @@ const schema = a.schema({
         .queryField("clockRecordsByUserAndTime"),
       index("date").sortKeys(["clockInTime"]).queryField("clockRecordsByDate"),
     ])
-    .authorization((allow) => [allow.publicApiKey()]), 
+    .authorization((allow) => [allow.publicApiKey()]),
 });
 
 export type Schema = ClientSchema<typeof schema>;

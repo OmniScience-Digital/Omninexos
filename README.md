@@ -15,3 +15,10 @@ The React Compiler is not enabled on this template because of its impact on dev 
 
 If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
+
+zip -r OmniNexos_Frontend.zip . \
+  -x "node_modules/*" \
+  -x ".git/*" \
+  -x ".next/*" \
+  -x "*.DS_Store" \
+  -x "tsconfig.tsbuildinfo"
